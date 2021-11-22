@@ -1,0 +1,317 @@
+/* ///////////// GENERAL RULES ///////////// */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    user-select: none;
+
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #eff;
+}
+
+/* ///////////// NAVIGATION BAR ///////////// */
+nav {
+    margin: auto;
+    padding: 10px 35px;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a {
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    color: green;
+}
+
+nav h1:hover {
+    cursor: pointer;
+}
+
+nav span {
+    font-weight: 900;
+    margin-right: 3px;
+}
+
+nav button {
+    width: auto;
+    height: auto;
+    padding: 10px;
+
+    color: white;
+    font-size: 20px;
+    background-color: green;
+    border: none;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+nav button:hover {
+    box-shadow: 0 2px 10px 0 grey;
+    transform: scale(1.005);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+@media only screen and (max-width: 374px) {
+    nav {
+        padding: 20px 20px;
+    }
+}
+
+/* ///////////// ADD NEW TASK WINDOW ///////////// */
+#overlay {
+    position: fixed;
+    padding:0;
+    margin:0;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.623);
+
+    display: flex;
+    justify-content: center;
+}
+
+#addNewTask {
+    z-index: 1;
+    height: auto;
+    width: 500px;
+    margin: auto;
+
+    background-color: white;
+
+    /* TMP ??? */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ////// TASK HEADER//////  */
+.taskHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.6);
+}
+
+.taskHeader h1 {
+    font-weight: normal;
+    font-size: 30px;
+}
+
+.taskHeader button {
+    width: 40px;
+    height: 40px;
+    border-radius: 10%;
+    border: 1px solid black;
+
+    transition: 0.2s;
+}
+
+.taskHeader button span{
+    font-size: 30px;
+}
+
+.taskHeader button:hover{
+    cursor: pointer;
+    box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.726);
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+/* ////// TASK INPUT//////  */
+.taskInputContainer {
+    display: flex;
+    flex-flow: wrap column;
+    padding: 30px 20px;
+}
+
+.taskInputContainer h2 {
+    font-weight: normal;
+    font-size: 16px;
+    margin-bottom: 5px;
+    margin-top: 10px
+}
+
+.taskInputContainer input,
+.taskInputContainer textarea {
+    max-width: 100%;
+    border: 1px solid gray;
+    outline: none;
+    padding-left: 4px;
+    /* margin-bottom: 10px; */
+}
+
+.taskInputContainer input:focus,
+.taskInputContainer textarea:focus {
+    border: 1px solid black;
+}
+
+.taskInputContainer input {
+    height: 25px;
+}
+
+.taskInputContainer textarea {
+    padding-top: 4px;
+    height: 100px;
+}
+
+/* ////// TASK BUTTONS//////  */
+.taskBtns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 15px;
+    border-top: 1px solid rgba(211, 211, 211, 0.6);
+}
+
+.taskBtns button {
+    border: none;
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: 0.2s;
+}
+
+#taskSave {
+    background-color: steelblue;
+    color: white;
+}
+
+#taskClose:hover, #taskSave:hover {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#taskClose:hover {
+    box-shadow: 0 2px 2px 2px rgba(128, 128, 128, 0.5);
+}
+
+#taskSave:hover {
+    box-shadow: 0 2px 5px 2px grey;
+}
+
+/* ///////////// CONTAINER OF TODO CARDS  ///////////// */
+main {
+    margin: 25px 10%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 25px;
+}
+
+.card {
+    /* width: 500px; */
+    border: 2px solid black;
+    background-color: white;
+    text-align: center;
+}
+
+/* ////// SMALLER SCREENS //////  */
+@media only screen and (max-width: 1204px) { /* tablet landscape */
+    main {
+        margin: 25px 25px;
+    }
+}
+
+@media only screen and (max-width: 900px) { /* tablet horizontal */
+    main {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media only screen and (max-width: 480px) { /* mobile */
+    main {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ////// BIN ICON//////  */
+.cardTop {
+    height: 45px;
+    width: 100%;
+    background-color: white;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
+.binContainer {
+    margin: 4px;
+    margin-right: 5px;
+    /* margin-top: 2px; */
+    width: 45px;
+    /* padding-right: 2px; */
+    border: 2px solid red;
+    border-radius: 3px;
+
+    display: flex;
+    justify-content: center;
+}
+
+.binImage {
+    background-image: url("./images/bin.jpg");
+    background-size: cover;
+    height: 30px;
+    width: 20px;
+    transition: 0.05s;
+
+    border-radius: 10%;
+}
+
+.binImage:hover {
+    background-image: url("./images/bin-opened.jpg");
+    cursor: pointer;
+    transition: 0.05s;
+}
+
+/* ////// IMAGE //////  */
+.card img {
+    /* margin-top: 100px; */
+    width: 100%;
+}
+
+/* ////// TEXT //////  */
+.card h2 {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.card p {
+    font-size: 14px;
+    /* height: 100px; */
+    width: 90%;
+    margin: auto;
+    line-height: 14px;
+    overflow:visible;
+    margin-bottom: 15px;
+}
+
+.card .cardType {
+    /* max-height: 40px; */
+    font-size: 16px;
+    line-height: 40px;
+    width:fit-content;
+
+    /* position: relative; */
+
+    margin: 5px auto;
+    padding: 0 10px;
+
+    color: white;
+    background-color: steelblue;
+    border-radius: 10px;
+}

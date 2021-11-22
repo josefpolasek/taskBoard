@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Task Platform</title>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS link -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JavaScript and JQuery-->
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="app.js" async></script>
+</head>
+
+<body>
+    <nav>
+        <a href="">Tasker</a>
+        <button id="addNew"><span>+</span>Add New</button>
+    </nav>
+
+    <div id="overlay">
+        <div id="addNewTask">
+            <div class="taskHeader">
+                <h1>Add new task</h1>
+                <button id="taskCancel"><span>X</span></button>
+            </div>
+            <div class="taskInputContainer">
+                <h2>Image url</h2>
+                <input type="text" placeholder="https://image.com" class="taskInput" id="imageInput">
+                <h2>Task Title</h2>
+                <input type="text" placeholder="UI development" class="taskInput" id="titleInput">
+                <h2>Task Type</h2>
+                <input type="text" placeholder="study" class="taskInput" id="typeInput">
+                <h2>Task Description</h2>
+                <textarea placeholder="Describe your task in detail" id="descriptionInput"></textarea>
+            </div>
+            <div class="taskBtns">
+                <button id="taskClose">Close</button>
+                <button id="taskSave">Save Changes</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="taskBoard">
+        <!-- <div class="card" id="card1">
+            <div class="cardTop">
+                <div class="binContainer">
+                    <div class="binImage"></div>
+                </div>
+            </div>
+
+            <img src="https://media.istockphoto.com/photos/indian-engineer-confidence-construction-site-picture-id186621910"
+                alt="Engineer">
+            <h2>Engineer</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur enim aliquam quidem?/p>
+            <div class="cardType">work</div>
+        </div> -->
+    </main>
+
+</body>
+
+</html>
