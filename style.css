@@ -278,7 +278,7 @@ main {
 }
 
 /* ////// IMAGE //////  */
-.card img {
+.card video {
     /* margin-top: 100px; */
     width: 100%;
 }

@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 
     function display(todos) {
-        $("#taskBoard").html("");
+        // $("#taskBoard").html("");
         // .html("");
 
         todos.forEach(item => {
