@@ -14,7 +14,7 @@ $(document).ready(function () {
 
 
     function display(todos) {
-        // $("#taskBoard").html("");
+        $("#taskBoard").html("");
         // .html("");
 
         todos.forEach(item => {
@@ -27,7 +27,9 @@ $(document).ready(function () {
                         <div class="binImage"></div>
                     </div>
                 </div>
-                <img src="${item.imageUrl}" alt="task image">
+                <div class="imgWrapper">
+                    <img src="${item.imageUrl}" alt="task image">
+                </div>
                 <h2>${item.title}<h2>
                 <p>${item.description}</p>
                 <div class="cardType">${item.type}</div>
