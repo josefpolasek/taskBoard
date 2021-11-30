@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #eff;
+    background-color: hsla(120, 100%, 89%, 0.6);
 }
 
 /* ///////////// NAVIGATION BAR ///////////// */
@@ -278,9 +278,20 @@ main {
 }
 
 /* ////// IMAGE //////  */
-.card video {
-    /* margin-top: 100px; */
-    width: 100%;
+.card .imgWrapper {
+    height: 100px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card img {
+    max-width: 100%;
+    /* height: min-content; */
+    /* max-height: 100px; */
+    /* overflow: hidden; */
 }
 
 /* ////// TEXT //////  */
