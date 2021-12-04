@@ -15,7 +15,6 @@ $(document).ready(function () {
 
     function display(todos) {
         $("#taskBoard").html("");
-        // .html("");
 
         todos.forEach(item => {
             let c = document.createElement("div");
